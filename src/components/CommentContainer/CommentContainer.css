@@ -1,0 +1,291 @@
+.commentContainer {
+    background-color: #454545cf;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cancelIcon {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    z-index: 100;
+    color: #fff;
+    font-weight: 200;
+}
+
+.commentBox {
+    height: 90%;
+    width: 71%;
+    background-color: #fff;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    flex-wrap: nowrap;
+}
+
+.postBox {
+    flex: 1;
+    width: 50%;
+    overflow: hidden;
+}
+
+.postImgChat {
+    height: 100%;
+    width: 100%;
+    transition: all 0.3s ease-in-out;
+}
+
+.postImgChat:hover {
+    transform: scale(1.1);
+}
+
+.chatBox {
+    flex: 1;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+
+}
+
+.headerChatBox {
+    border-bottom: 1px solid rgb(219, 219, 219);
+    height: 10%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.UserImg {
+    width: 35px;
+    height: 60%;
+    border-radius: 50%;
+    border: 2px solid orangered;
+    padding: 2px;
+}
+
+.commentChatBox {
+    height: 90%;
+    box-sizing: border-box;
+    overflow-y: scroll;
+    padding: 0 10px;
+    position: relative;
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.commentChatBox::-webkit-scrollbar {
+    display: none;
+}
+
+.cmntUser {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    height: 50%;
+    width: 100%;
+    align-content: center;
+}
+
+.cmntUser .row {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+.cmntTextRow {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    height: 50%;
+    width: 100%;
+    align-content: center;
+}
+
+.CmntChatBox .cmntText {
+    padding: 10px 10px;
+    background-color: #2c2c2c;
+    color: #fff;
+    border-radius: 20px;
+    display: block;
+    width: max-content;
+    max-width: 90%;
+    position: relative;
+    letter-spacing: 1px;
+    border-top-left-radius: 0px;
+    margin-left: 5%;
+}
+
+.col {
+    display: flex;
+    flex-direction: column;
+    height: 90%;
+    align-items: stretch;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+}
+
+.CmntChatBox {
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 10px 0;
+}
+
+.deleteIcon {
+    font-size: 1.2rem;
+    color: red;
+    margin-right: 1rem;
+}
+
+.commentChatBox p {
+    color: #ff0000;
+    font-size: 20px;
+}
+
+.comntUserImg {
+    height: 50%;
+    border-radius: 50%;
+    border: 2px solid orangered;
+    padding: 2px;
+}
+
+.chatBottom {
+    height: 10%;
+    border-top: 1px solid rgb(135 135 135);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    overflow: hidden;
+}
+
+.smileIcon {
+    padding: 0 15px;
+
+}
+
+.chatBottom input {
+    width: 80%;
+    height: 100%;
+    border: none;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    font-weight: 400;
+}
+
+input:focus-visible {
+    outline: none;
+}
+
+.chatBottom span {
+    font-weight: 500;
+    cursor: pointer;
+    padding: 15px 15px;
+    border-radius: 5px;
+
+}
+
+.chatBottom span:hover {
+    background-color: rgb(47, 125, 251);
+    color: #fff;
+}
+
+
+@media screen and (max-width: 1000px) {
+    .commentBox {
+        width: 80%;
+    }
+
+    .cancelIcon {
+        font-size: 1.2rem;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .commentContainer {
+        height: auto;
+        padding: 20px 0;
+    }
+
+    .commentBox {
+        width: 80%;
+        flex-direction: column;
+        align-items: center;
+        height: 100vh;
+    }
+
+    .col {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .cancelIcon {
+        font-size: 1.1rem;
+        position: fixed;
+        right: 5px;
+        top: 5px;
+    }
+
+    .postBox {
+        width: 100%;
+    }
+
+    .chatBox {
+        width: 100%;
+        height: 50%;
+    }
+
+    .headerChatBox {
+        padding: 10px;
+        height: 20%;
+    }
+
+    .commentChatBox {
+        height: 90%;
+        padding-bottom: 50px;
+    }
+
+    .chatBottom {
+        height: 20%;
+        border-bottom: 1px solid rgb(135 135 135);
+    }
+
+    .loadingText {
+        top: 17vh;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .commentBox {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .commentBox {
+        width: 100%;
+    }
+
+    .cancelIcon {
+        font-size: 1rem;
+    }
+}
