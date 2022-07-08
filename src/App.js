@@ -11,7 +11,7 @@ import {
 
 const App = () => {
   return (
-    <Router>
+    <Router basename='/comment_It'>
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/commentContainer' element={<CommentContainer />} />
