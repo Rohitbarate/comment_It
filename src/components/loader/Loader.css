@@ -1,5 +1,5 @@
 .loadingText {
-    font-size: 2rem;
+    font-size: 1rem;
     transition: all 0.3s ease-in-out;
     position: absolute;
     top: 40vh;
@@ -12,8 +12,8 @@
 }
 
 .loadingText p {
-    height: 100px;
-    width: 100px;
+    height: 50px;
+    width: 50px;
     border-radius: 50%;
     border: 8px solid #000;
     border-top-color: rgb(241, 121, 29);

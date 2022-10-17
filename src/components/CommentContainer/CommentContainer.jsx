@@ -96,7 +96,7 @@ function CommentContainer() {
                         <div className="commentChatBox">
                             {loading
                                 ?
-                                <Loader />
+                                <Loader text='comments'/>
                                 :
                                 [cmnts.length === 0
                                     ?

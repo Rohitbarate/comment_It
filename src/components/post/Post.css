@@ -1,9 +1,10 @@
 .mainBox{
-    width: 80%;
+    width: 90%;
     background-color: #fff;
     border: 1px solid rgb(180, 178, 178) ;
     border-radius: 8px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
+    overflow: hidden;
 }
 .headerBox{
     border-bottom: 1px solid rgb(219, 219, 219);
@@ -38,13 +39,26 @@
 }
 .bodyBox{
     width: 100%;
-     height: 50%;
+    height: 500px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+   overflow: hidden;
+   background: rgba(0, 0, 0, 0.83);
+}
+.postImg{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    transition: all 0.5s ease;
+}
+.postImg:hover{
+    background-size: cover;
+    transform: scale(1.2);
 }
 .postImg{
     width: 100%;
     max-height: 500px;
-    background-size: contain;
-   
 }
 .footerBox{
     border-bottom: 1px solid rgb(219, 219, 219);

@@ -1,11 +1,11 @@
 import React from 'react'
 import './Loader.css'
 
-function Loader() {
+function Loader({text}) {
   return (
       <div className='loadingText'>
             <p></p>
-            <span>loading...</span>
+            <span>Loading {text}...</span>
       </div>
   )
 }
