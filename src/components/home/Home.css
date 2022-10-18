@@ -16,6 +16,7 @@
     color: #000;
     border-bottom: 1px solid rgb(219, 219, 219);
     display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
     position: sticky;
@@ -23,10 +24,46 @@
     z-index: 100;
 }
 
-.headerName {
-    font-family: 'BIZ UDGothic', sans-serif;
-    letter-spacing: 1px;
-    font-size: 1rem;
+.logoDiv {
+    flex: 0.5;
+    text-align: center;
+}
+.logo{
+    font-family: 'Satisfy','BIZ UDGothic', sans-serif;
+    font-size: 1.9rem;
+    font-weight: 600;
+    padding: 5px 10px;
+    position: relative;
+    background: linear-gradient(to bottom right, #6b0b8796 30%, #f8f80b78 50%, #f37609cf 70%);
+}
+/* .logo::before{
+    content: "";
+    background: linear-gradient(to bottom right, #ea0ea1bc 30%, #f8f80b 50%, #f37609d0 70%);
+    filter: blur(10px);
+    position: absolute;
+    left: 0;
+    height: 80%;
+    width: 90%;
+    z-index: 0;
+} */
+.navRow{
+    flex: 0.5;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    column-gap: 30px;
+    box-sizing: border-box;
+}
+.navLink{
+    font-weight: 600;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.navLink:hover{
+    color: rgb(43, 43, 43);
+    transform: scale(0.9);
 }
 .row{
     display: flex;
@@ -35,7 +72,7 @@
     justify-content: center;
 }
 .postContainer {
-    /* width: 45%; */
+    min-width: 50%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -46,11 +83,10 @@
 
 }
 .usersContainer{
-    /* background-color: brown; */
     flex: 0.4;
     height: max-content;
     max-height: 80%;
-    width: 50%;
+    min-width: 40%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -67,6 +103,21 @@
 }
 h5,h4{
     color: rgb(115, 114, 114);
+}
+.seeMoreBtn{
+    font-size: 1.2rem;
+    border: 1px solid #fb3920;
+    cursor: pointer;
+    color: #fb3920;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    padding: 5px 10px;
+    border-radius: 10px;
+}
+.seeMoreBtn:hover{
+    transform: scale(0.9);
+    background-color: #fb3920;
+    color: #fff;
 }
 
 @media screen and (max-width:800px) {

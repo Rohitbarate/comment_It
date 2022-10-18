@@ -31,4 +31,10 @@
 .mContainer>span{
     font-size: 0.8rem;
     color: rgb(251, 57, 32);
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+.mContainer>span:hover{
+    transform: scale(0.9);
 }

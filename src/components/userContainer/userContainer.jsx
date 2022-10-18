@@ -7,7 +7,7 @@ const usersContainer = ({ user }) => {
     <div className="mContainer">
         <div className="pfl">
           <img src={picture} alt="" className="pflImg" />
-        {title}. {firstName + lastName}
+        {title}. {firstName + " " + lastName}
         </div>
         <span>
         Follow

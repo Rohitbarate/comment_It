@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 
 const Post = (props) => {
   const [comments, setComments] = useState([]);
+  const [imgLoading, setImgLoading] = useState(true);
   const { img, picture, name, text, tags, likes, time, id, item } = props;
 
   const fetchComments = () => {
@@ -22,6 +23,7 @@ const Post = (props) => {
   };
   useEffect(() => {
     fetchComments();
+
     // eslint-disable-next-line
   }, []);
 
@@ -39,9 +41,17 @@ const Post = (props) => {
           <BsThreeDots />
         </span>
       </div>
-      <div className="bodyBox"
-      >
-        <img src={img} alt="" className="postImg" />
+      <div className="bodyBox">
+        <img
+        // style={{
+        //   filter:`blur(${!imgLoading?'5px':'none'})`
+        // }}
+          src={img}
+          alt=""
+          onLoadStart={()=>setImgLoading(true)}
+          onLoad={()=>setImgLoading(false)}
+          className="postImg"
+        />
       </div>
       <div className="footerBox">
         <div className="buttons">
@@ -68,7 +78,11 @@ const Post = (props) => {
         </div>
         <div className="tags">
           {tags.map((tag) => {
-            return <span className="tags bold">#{tag} </span>;
+            return (
+              <span className="tags bold" key={tag}>
+                #{tag}{" "}
+              </span>
+            );
           })}
         </div>
         <div className="comtNum">
