@@ -3,6 +3,7 @@ import "./Home.css";
 import Post from "../post/Post";
 import Loader from "../loader/Loader";
 import UserContainer from "../userContainer/userContainer";
+import Navbar from "../Navbar/Navbar";
 const baseUrl = "https://dummyapi.io/data/v1";
 
 const Home = () => {
@@ -47,16 +48,8 @@ const Home = () => {
 
   return (
     <>
-      <div className="container">
-        <div className="navbar">
-          <div className="logoDiv">
-            <span className="logo">Comment It</span></div>
-          <div className="navRow">
-            <div className="navLink">Home</div>
-            <div className="navLink">About</div>
-            <div className="navLink">Help</div>
-          </div>
-        </div>
+      <div className="mainContainer">
+        <Navbar/>
         {loading ? (
           <Loader text="posts" />
         ) : (
@@ -90,14 +83,13 @@ const Home = () => {
               </button>
             </div>
             <div className="usersContainer">
-              <h4>Suggestions For You</h4>
+              <h3>Suggestions For You</h3>
               <div className="col">
                 {users.map((user) => {
                   return <UserContainer user={user} key={user.id} />;
                 })}
               </div>
-
-              <h5> &copy; 2022 COMMENT_IT BY ROHIT</h5>
+              <h5 style={{fontFamily:'Satisfy',fontWeight:'500',textAlign:'center',width:'100%',letterSpacing:'2px',fontSize:'1rem'}}> &copy; 2022 Copyright : <span style={{fontWeight:'600',color:'#000',fontSize:'1rem'}}>Rohit Barate</span></h5>
             </div>
           </div>
         )}

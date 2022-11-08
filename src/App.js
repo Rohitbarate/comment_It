@@ -11,9 +11,11 @@ import {
 
 const App = () => {
   return (
-    <Router basename='/comment_It'>
+    <Router basename='/comment_It/'>
       <Routes>
-        <Route path='/' element={<Home />} />
+        <Route exact path='/' element={<Home />} />
+        {/* <Route exact path='/About' element={<Home />} />
+        <Route exact path='/Help' element={<Home />} /> */}
         <Route path='/commentContainer' element={<CommentContainer />} />
       </Routes>
     </Router>

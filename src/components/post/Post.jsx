@@ -6,7 +6,6 @@ import { Link } from "react-router-dom";
 
 const Post = (props) => {
   const [comments, setComments] = useState([]);
-  const [imgLoading, setImgLoading] = useState(true);
   const { img, picture, name, text, tags, likes, time, id, item } = props;
 
   const fetchComments = () => {
@@ -43,13 +42,8 @@ const Post = (props) => {
       </div>
       <div className="bodyBox">
         <img
-        // style={{
-        //   filter:`blur(${!imgLoading?'5px':'none'})`
-        // }}
           src={img}
           alt=""
-          onLoadStart={()=>setImgLoading(true)}
-          onLoad={()=>setImgLoading(false)}
           className="postImg"
         />
       </div>
